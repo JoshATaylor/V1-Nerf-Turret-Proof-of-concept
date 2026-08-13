@@ -24,7 +24,6 @@ https://github.com/user-attachments/assets/ae349f70-2eb1-47dc-9ca1-c463f80f88df
 ```cpp
 #include <Servo.h>
 
-// Pin definitions
 const int TRIG_PIN = 2;
 const int ECHO_PIN = 3;
 const int GUN_PIN = 4;
@@ -63,7 +62,6 @@ void loop() {
     Serial.print(distanceCm);
     Serial.println(" cm");
 
-    // Valid distance check between 2 cm and 100 cm
     if (distanceCm >= 2.0 && distanceCm <= 100.0) {
       digitalWrite(GUN_PIN, HIGH);
       
